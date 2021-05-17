@@ -16,5 +16,10 @@ namespace Sistema_Condominio
         {
             InitializeComponent();
         }
+
+        private void btConfig_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
