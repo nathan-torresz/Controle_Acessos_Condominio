@@ -71,6 +71,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Visitante.cs" />
+    <EmbeddedResource Include="FormMorador.resx">
+      <DependentUpon>FormMorador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPainelDeControle.resx">
       <DependentUpon>FormPainelDeControle.cs</DependentUpon>
     </EmbeddedResource>

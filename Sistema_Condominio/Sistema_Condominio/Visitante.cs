@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sistema_Condominio
+namespace Condominio_Herança
 {
     class Visitante: Pessoa
     {

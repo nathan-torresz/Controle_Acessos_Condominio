@@ -13,7 +13,7 @@ namespace Sistema_Condominio
     public partial class FormPainelDeControle : Form
     {
         private FormConfiguracoes formConfiguracoes;
-        //private FormMorador formMorador;
+        private FormMorador formMorador;
         //private FormVisitante formVisitante;
         //private FormAcesso formAcesso;
 
@@ -21,7 +21,7 @@ namespace Sistema_Condominio
         {
             InitializeComponent();
             formConfiguracoes = new FormConfiguracoes(this);
-
+            formMorador = new FormMorador(this);
         }
 
         private void btConfig_Click(object sender, EventArgs e)
