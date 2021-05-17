@@ -1,6 +1,6 @@
 ﻿namespace Sistema_Condominio
 {
-    partial class Form1
+    partial class FormPainelDeControle
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -73,6 +73,7 @@
             this.cToolStripMenuItem.Name = "cToolStripMenuItem";
             this.cToolStripMenuItem.Size = new System.Drawing.Size(295, 26);
             this.cToolStripMenuItem.Text = "Configurações do Condominio";
+            this.cToolStripMenuItem.Click += new System.EventHandler(this.btConfig_Click);
             // 
             // tsMorador
             // 
@@ -81,7 +82,7 @@
             this.ativarDesativarMoradorToolStripMenuItem});
             this.tsMorador.Enabled = false;
             this.tsMorador.Name = "tsMorador";
-            this.tsMorador.Size = new System.Drawing.Size(81, 24);
+            this.tsMorador.Size = new System.Drawing.Size(81, 26);
             this.tsMorador.Text = "Morador";
             // 
             // adicionarMoradorToolStripMenuItem
@@ -102,13 +103,13 @@
             this.adicionarVisitanteToolStripMenuItem});
             this.tsVisitante.Enabled = false;
             this.tsVisitante.Name = "tsVisitante";
-            this.tsVisitante.Size = new System.Drawing.Size(80, 24);
+            this.tsVisitante.Size = new System.Drawing.Size(80, 26);
             this.tsVisitante.Text = "Visitante";
             // 
             // adicionarVisitanteToolStripMenuItem
             // 
             this.adicionarVisitanteToolStripMenuItem.Name = "adicionarVisitanteToolStripMenuItem";
-            this.adicionarVisitanteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.adicionarVisitanteToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
             this.adicionarVisitanteToolStripMenuItem.Text = "Adicionar Visitante";
             // 
             // tsAcesso
@@ -117,7 +118,7 @@
             this.verificaçãoDeAcessoToolStripMenuItem});
             this.tsAcesso.Enabled = false;
             this.tsAcesso.Name = "tsAcesso";
-            this.tsAcesso.Size = new System.Drawing.Size(69, 24);
+            this.tsAcesso.Size = new System.Drawing.Size(69, 26);
             this.tsAcesso.Text = "Acesso";
             // 
             // verificaçãoDeAcessoToolStripMenuItem
@@ -176,7 +177,7 @@
             this.btAddMorador.Text = "Adicionar Morador";
             this.btAddMorador.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // FormPainelDeControle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -188,8 +189,11 @@
             this.Controls.Add(this.btConfig);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "FormPainelDeControle";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormPainelDeControle_Shown);
+            this.Shown += new System.EventHandler(this.FormPainelDeControle_Shown);
+            this.Enter += new System.EventHandler(this.FormPainelDeControle_Enter);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

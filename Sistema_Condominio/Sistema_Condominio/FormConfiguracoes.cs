@@ -12,9 +12,11 @@ namespace Sistema_Condominio
 {
     public partial class FormConfiguracoes : Form
     {
-        public FormConfiguracoes()
+        private FormPainelDeControle _formAnterior;
+        public FormConfiguracoes(FormPainelDeControle formAnterior)
         {
             InitializeComponent();
+            this._formAnterior = formAnterior;
         }
 
         private void btOK_Click(object sender, EventArgs e)
@@ -25,7 +27,16 @@ namespace Sistema_Condominio
             if (resposta == DialogResult.Yes)
             {
                 tbNomeCondominio.Enabled = false;
-                
+                Condominio c = new Condominio(nomeCondominio);
+                Condominio.Self = c;
+                this._formAnterior.Show();
+                this._formAnterior.Atualizar();
+                this.Hide();
+            }
+            else
+            {
+                this._formAnterior.Show();
+                this.Hide();
             }
         }
     }
