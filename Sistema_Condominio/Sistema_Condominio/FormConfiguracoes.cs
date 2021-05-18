@@ -22,21 +22,29 @@ namespace Sistema_Condominio
         private void btOK_Click(object sender, EventArgs e)
         {
             string nomeCondominio = tbNomeCondominio.Text;
-            DialogResult resposta = MessageBox.Show($"Está certo de que desejas criar o condomínio {tbNomeCondominio.Text}?\n" +
-                $"Não será possível modificar o nome depois!","Confirmação", MessageBoxButtons.YesNo);
-            if (resposta == DialogResult.Yes)
+            if (nomeCondominio.Length > 0)
             {
-                tbNomeCondominio.Enabled = false;
-                Condominio c = new Condominio(nomeCondominio);
-                Condominio.Self = c;
-                this._formAnterior.Show();
-                this._formAnterior.Atualizar();
-                this.Hide();
+                DialogResult resposta = MessageBox.Show($"Está certo de que desejas criar o condomínio {tbNomeCondominio.Text}?\n" +
+                    $"Não será possível modificar o nome depois!", "Confirmação", MessageBoxButtons.YesNo);
+                if (resposta == DialogResult.Yes)
+                {
+                    tbNomeCondominio.Enabled = false;
+                    Condominio c = new Condominio(nomeCondominio);
+                    Condominio.Self = c;
+                    this._formAnterior.Show();
+                    this._formAnterior.Atualizar();
+                    this.Hide();
+                }
+                else
+                {
+                    this._formAnterior.Show();
+                    this.Hide();
+                }
             }
             else
             {
-                this._formAnterior.Show();
-                this.Hide();
+                MessageBox.Show("Insira o nome do condomínio!");
+                tbNomeCondominio.Focus();
             }
         }
     }

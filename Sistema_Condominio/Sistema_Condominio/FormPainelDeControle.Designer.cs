@@ -82,7 +82,7 @@
             this.ativarDesativarMoradorToolStripMenuItem});
             this.tsMorador.Enabled = false;
             this.tsMorador.Name = "tsMorador";
-            this.tsMorador.Size = new System.Drawing.Size(81, 26);
+            this.tsMorador.Size = new System.Drawing.Size(81, 24);
             this.tsMorador.Text = "Morador";
             // 
             // adicionarMoradorToolStripMenuItem
@@ -90,12 +90,14 @@
             this.adicionarMoradorToolStripMenuItem.Name = "adicionarMoradorToolStripMenuItem";
             this.adicionarMoradorToolStripMenuItem.Size = new System.Drawing.Size(261, 26);
             this.adicionarMoradorToolStripMenuItem.Text = "Adicionar Morador";
+            this.adicionarMoradorToolStripMenuItem.Click += new System.EventHandler(this.btAddMorador_Click);
             // 
             // ativarDesativarMoradorToolStripMenuItem
             // 
             this.ativarDesativarMoradorToolStripMenuItem.Name = "ativarDesativarMoradorToolStripMenuItem";
             this.ativarDesativarMoradorToolStripMenuItem.Size = new System.Drawing.Size(261, 26);
             this.ativarDesativarMoradorToolStripMenuItem.Text = "Ativar/Desativar Morador";
+            this.ativarDesativarMoradorToolStripMenuItem.Click += new System.EventHandler(this.btAddMorador_Click);
             // 
             // tsVisitante
             // 
@@ -103,7 +105,7 @@
             this.adicionarVisitanteToolStripMenuItem});
             this.tsVisitante.Enabled = false;
             this.tsVisitante.Name = "tsVisitante";
-            this.tsVisitante.Size = new System.Drawing.Size(80, 26);
+            this.tsVisitante.Size = new System.Drawing.Size(80, 24);
             this.tsVisitante.Text = "Visitante";
             // 
             // adicionarVisitanteToolStripMenuItem
@@ -118,7 +120,7 @@
             this.verificaçãoDeAcessoToolStripMenuItem});
             this.tsAcesso.Enabled = false;
             this.tsAcesso.Name = "tsAcesso";
-            this.tsAcesso.Size = new System.Drawing.Size(69, 26);
+            this.tsAcesso.Size = new System.Drawing.Size(69, 24);
             this.tsAcesso.Text = "Acesso";
             // 
             // verificaçãoDeAcessoToolStripMenuItem
@@ -166,6 +168,7 @@
             this.btAtivarDesatMorador.TabIndex = 4;
             this.btAtivarDesatMorador.Text = "Ativar/Desativar Morador";
             this.btAtivarDesatMorador.UseVisualStyleBackColor = true;
+            this.btAtivarDesatMorador.Click += new System.EventHandler(this.btAddMorador_Click);
             // 
             // btAddMorador
             // 
@@ -176,6 +179,7 @@
             this.btAddMorador.TabIndex = 5;
             this.btAddMorador.Text = "Adicionar Morador";
             this.btAddMorador.UseVisualStyleBackColor = true;
+            this.btAddMorador.Click += new System.EventHandler(this.btAddMorador_Click);
             // 
             // FormPainelDeControle
             // 
@@ -190,6 +194,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormPainelDeControle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormPainelDeControle_Shown);
             this.Shown += new System.EventHandler(this.FormPainelDeControle_Shown);

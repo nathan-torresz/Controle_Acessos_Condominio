@@ -68,6 +68,7 @@
             this.Controls.Add(this.tbNomeCondominio);
             this.Controls.Add(this.label1);
             this.Name = "FormConfiguracoes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -24,16 +24,9 @@ namespace Sistema_Condominio
 
         }
 
-        private void btVoltar_Click(object sender, EventArgs e)
-        {
-            formPainelDeControle.Show();
-            formPainelDeControle.Atualizar();
-            this.Hide();
-        }
-
         private void btAddMorador_Click(object sender, EventArgs e)
         {
-            if (tbNome.Text.Length > 0 && tbCPF.Text.Length>0 && tbSenha.Text.Length >= Morador.TAM_MIN_SENHA)
+            if(tbNome.Text.Length>0 && tbCPF.Text.Length>0 && tbSenha.Text.Length>=Morador.TAM_MIN_SENHA )
             {
                 string nome = tbNome.Text;
                 string cpf = tbCPF.Text;
@@ -45,7 +38,11 @@ namespace Sistema_Condominio
                     item.SubItems.Add(cpf);
                     item.SubItems.Add("Sim");
                     lvMoradores.Items.Add(item);
-                    MessageBox.Show("Moradorr adicionado com sucesso!");
+                    MessageBox.Show("Morador adicionado com sucesso!");
+                    tbNome.Clear();
+                    tbCPF.Clear();
+                    tbSenha.Clear();
+                    tbNome.Focus();
                 }
                 else
                 {
@@ -54,8 +51,19 @@ namespace Sistema_Condominio
             }
             else
             {
-                MessageBox.Show("Dados incompletos ou senha não comtém caracteres suficientes!");
+                MessageBox.Show("Dados incompletos ou número de caracteres de senha fora de alcance!");
             }
+        }
+
+        private void btVoltar_Click(object sender, EventArgs e)
+        {
+            tbNome.Clear();
+            tbCPF.Clear();
+            tbSenha.Clear();
+            formPainelDeControle.Show();
+            formPainelDeControle.Atualizar();
+            this.Hide();
+
         }
     }
 }

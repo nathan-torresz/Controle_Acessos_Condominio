@@ -27,7 +27,6 @@ namespace Sistema_Condominio
         private void btConfig_Click(object sender, EventArgs e)
         {
 
-
             this.formConfiguracoes.Show();
             this.Hide();
             
@@ -58,6 +57,12 @@ namespace Sistema_Condominio
                 tsAcesso.Enabled = (Condominio.NumeroMoradoresAtivos > 0);
                 btVerificacaodeAcesso.Enabled = (Condominio.NumeroMoradoresAtivos > 0);
             }
+        }
+
+        private void btAddMorador_Click(object sender, EventArgs e)
+        {
+            formMorador.Show();
+            this.Hide();
         }
     }
 }
